@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Waste</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_camera.css') }}">
+</head>
+<body>
+    <div class="container-wrapper">
+        <img src="{{ url_for('static', filename='38.png') }}" alt="Left Image" class="side-image left">
+        <div class="container">
+            <h1>Capture Waste</h1>
+            <div class="camera-box">
+                <video id="video" autoplay></video>
+                <button id="snapButton"><img src="{{ url_for('static', filename='36.png') }}" alt="Capture"></button>
+                <canvas id="canvas" style="display:none;"></canvas>
+            </div>
+            <form id="uploadForm" action="{{ url_for('detect') }}" method="POST" enctype="multipart/form-data" style="display:none;">
+                <input type="file" id="fileInput" name="file">
+            </form>
+            <button id="detectButton">Detect Objects</button>
+        </div>
+        <img src="{{ url_for('static', filename='37.png') }}" alt="Right Image" class="side-image right">
+    </div>
+    
+    <script src="{{ url_for('static', filename='camera_script.js') }}"></script>
+</body>
+</html>

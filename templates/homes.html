@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrashFormers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="properties-container">
+            <a href="#">Home</a>
+            <a href="#">Info</a>
+            <a href="#">Service</a>
+        </div>
+    </div>
+    
+    <div class="feature-page">
+        <div class="waste-brief-info-button">
+            <div class="line-message">
+                <p class="message-title">
+                    <strong>WASTE<br>CLASSIFICATION</strong>
+                </p>
+                <p class="message">
+                    Discover how we're turning trash into treasure, reducing our environmental footprint, and fostering sustainable practices. Together, let's make every effort count towards a cleaner, healthier planet!"
+                </p>
+            </div>
+
+            <div class="read-more-container">
+                <button class="read-more-button">
+                    Read More
+                </button>
+            </div>
+        </div>
+
+        <div class="illustration-image">
+            <img class = "garbage-img" src="{{ url_for('static', filename='Waste management-amico.png') }}" alt="">
+        </div>
+    </div>
+
+
+    <!--Info page-->
+    <div class="objective-title">
+        <h1>Objectives</h1>
+    </div>
+
+    <div class="objectives-container">
+        <div class="objective-one">
+            <img class="d3-waste-image" src="{{ url_for('static', filename='9696395-removebg-preview.png') }}" alt="">
+            <p class="object-message">
+                To accurately classify waste materials using image recognition.
+            </p>
+        </div>
+
+        <div class="objective-one">
+            <img class="d3-waste-image" src="{{ url_for('static', filename='7814988-removebg-preview.png') }}" alt="">
+            <p class="object-message">
+                To implement real-time image processing for accurate waste material classification.
+            </p>
+        </div>
+
+        <div class="objective-one">
+            <img class="d3-waste-image" src="{{ url_for('static', filename='10542744-removebg-preview.png') }}" alt="">
+            <p class="object-message">
+                To develop a user-friendly interface for web-based image classification system of waste materials.
+            </p>
+        </div>
+    </div>
+
+
+    <!--Waste effect-->
+
+    <div class="background">
+        <div class="floating-object" style="top: 25%; left: 2%; width: 150px; transform: rotate(-25deg); z-index: 1"><img src="{{ url_for('static', filename='1.png') }}" alt="Banana"></div>
+        <div class="floating-object blur" style="top: 16%; left: 67%; width: 150px; transform: rotate(-25deg);"><img src="{{ url_for('static', filename='25.png') }}" alt="Banana"></div>
+
+        <div class="floating-object" style="top: 67%; left: 45%; width: 100px; transform: rotate(-25deg); z-index: 1;"><img src="{{ url_for('static', filename='26.png') }}" alt="Banana"></div>
+
+        <div class="floating-object" style="top: 65%; left: 3%; width: 150px; transform: rotate(-25deg);"><img src="{{ url_for('static', filename='34.png') }}" alt="Banana"></div>
+
+        <div class="floating-object" style="top: 12%; left: 33%; width: 150px; transform: rotate(-25deg);"><img src="{{ url_for('static', filename='33.png') }}" alt="Banana"></div>
+
+        <div class="floating-object" style="top: 8%; left: 23%; width: 100px; transform: rotate(45deg);"><img src="{{ url_for('static', filename='2.png') }}" alt="Rock"></div>
+
+        <div class="floating-object" style="top: 25%; left: 50%; width: 180px; transform: rotate(-40deg); z-index: 1;"><img src="{{ url_for('static', filename='3.png') }}" alt="Plastic Bottle"></div>
+
+        <div class="floating-object blur" style="top:39%; left: 21%; width: 180px; transform: rotate(-40deg);"><img src="{{ url_for('static', filename='6.png') }}" alt="Plastic Bottle"></div>
+
+        <div class="floating-object blur" style="top:63%; left: -8%; width: 180px; transform: rotate(90deg);"><img src="{{ url_for('static', filename='11.png') }}" alt="Plastic Bottle"></div>
+
+        <div class="floating-object" style="top: 55%; left: 83%; width: 200px; transform: rotate(25deg); z-index: 1"><img src="{{ url_for('static', filename='12.png') }}" alt="Mask"></div>
+
+        <div class="floating-object" style="top: 55%; left: 33%; width: 200px; transform: rotate(-25deg); z-index: 1"><img src="{{ url_for('static', filename='13.png') }}" alt="Mask"></div>
+
+        <div class="floating-object blur" style="top: 45%; left: 70%; width: 200px; transform: rotate(25deg);"><img src="{{ url_for('static', filename='4.png') }}" alt="Mask"></div>
+
+        <div class="floating-object" style="top: 60%; left: 65%; width: 150px; transform: rotate(40deg);"><img src="{{ url_for('static', filename='5.png') }}" alt="Burger"></div>
+
+        <div class="floating-object" style="top: 65%; left: 10%; width: 150px; transform: rotate(15deg);"><img src="{{ url_for('static', filename='14.png') }}" alt="Cup"></div>
+
+        <div class="floating-object blur" style="top: 60%; left: 27%; width: 120px; transform: rotate(-10deg);"><img src="{{ url_for('static', filename='7.png') }}" alt="Straw"></div>
+
+        <div class="floating-object blur" style="top: 60%; left: 50%; width: 140px; transform: rotate(-45deg);"><img src="{{ url_for('static', filename='8.png') }}" alt="Copper Fitting"></div>
+
+        <div class="floating-object" style="top: 30%; left: 70%; width: 170px; transform: rotate(-20deg);"><img src="{{ url_for('static', filename='9.png') }}" alt="Glass Bottle"></div>
+
+        <div class="floating-object" style="top: 20%; left: 90%; width: 160px; transform: rotate(10deg);"><img src="{{ url_for('static', filename='10.png') }}" alt="Leaf"></div>
+        <div class="overlay-text" >
+
+
+            <h1>WASTE</h1>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <h1>Proper Waste Disposal</h1>
+        <p>Proper waste disposal minimizes pollution and protects the environment.</p>
+        <div class="cards">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='21.png') }}" alt="Reduce" style="transform: rotate(10deg);  margin-bottom: -20px; padding-bottom: -20px; padding-top: -20px; margin-top: -10px;">
+                </div>
+                <h2>Reduce</h2>
+                <p>Cut down on waste by choosing products with less packaging, buying only what you need, and opting for durable items. Small changes help save resources and reduce pollution.</p>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='18.png') }}" alt="Reuse" style="transform: rotate(10deg);">
+                </div>
+                <h2>Reuse</h2>
+                <p>Give items a second life instead of throwing them away. Repurpose jars for storage, donate old clothes, or use both sides of paper. Reusing reduces the need for new products and helps the environment.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='15.png') }}" alt="Recycle" style="transform: rotate(-16deg);">
+                </div>
+                <h2>Recycle</h2>
+                <p>Sort and clean recyclables like paper, glass, metal, and certain plastics. Recycling keeps materials out of landfills and turns waste into new products, conserving resources and reducing environmental impact.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="classification-container">
+        <div class="class-image">
+            <img src="{{ url_for('static', filename='22.jpg') }}" alt="">
+        </div>
+        <div class="class-text-q">
+            <h1>Do you want to classify <br> your waste? Lets do it</h1>
+            <a href="{{ url_for('index') }}">
+                <button class="class-button">
+                    Proceed
+                </button>
+            </a>
+            
+        </div>
+        <div class="stem-border" style="top: -30%; left: 100%; width: 260px; transform: rotate(180deg);"><img src="{{ url_for('static', filename='23.png') }}" alt="Leafs"></div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <h2>Zero Waste</h2>
+                <p>There should be millions of people striving for zero waste, rather than a select few who achieve it perfectly.</p>
+                <p>Lyceum of the Philippines - Manila</p>
+                <p>TrashFormers.com</p>
+                <p>Mon: 1:00pm to 7:30pm</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>Latest Project Report</h2>
+                <ul>
+                    <li>
+                        <p>Improving the User Interface and classification</p>
+                        <p>June 01, 2024</p>
+                    </li>
+                    <li>
+                        <p>Revision of Paper from Chapter 1 - 5</p>
+                        <p>June 01, 2024</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <img src="{{ url_for('static', filename='24.png') }}"  alt="Reusable bag" >
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+</body>
+</html> 

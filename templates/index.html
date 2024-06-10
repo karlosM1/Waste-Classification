@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Detection - Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="side-content">
+            <img src="{{ url_for('static', filename='30.png') }}" alt="Left Image">
+            <p>Biodegradable materials are substances that can be broken down by natural processes involving microorganisms, such as bacteria and fungi, into harmless components like water, carbon dioxide, and organic matter. </p>
+        </div>
+        <a href="{{ url_for('home') }}" class="back-button">Back</a>
+        <div class="upload-container">
+            <h1>Uploaded files</h1>
+            <form id="uploadForm" method="post" enctype="multipart/form-data">
+                <div class="upload-area" id="uploadArea">
+                    <div class="icon">
+                        <img src="{{ url_for('static', filename='35.png') }}" alt="Upload Icon">
+                    </div>
+                    <p>Drag and Drop files to upload<br>or</p>
+                    <button type="button" onclick="document.getElementById('fileInput').click()">Browse</button>
+                    <input type="file" id="fileInput" name="file" accept="image/*">
+                    <p class="supported-files">Supported files: JPG, JPEG, PNG</p>
+                </div>
+                <div class="uploaded-files" id="uploadedFiles">
+                    <ul id="fileList"></ul>
+                </div>
+                <button type="submit" id="detectButton">Detect Objects</button>
+            </form>
+            <div class="camera-link">
+                <a href="{{ url_for('camera') }}">Or use your camera</a>
+            </div>
+            <div class="footer-image">
+                <img src="{{ url_for('static', filename='32.png') }}" alt="Footer Image">
+            </div>
+        </div>
+        <div class="side-content">
+            <img src="{{ url_for('static', filename='31.png') }}" alt="Right Image">
+            <p>Recyclable materials are items that can be reprocessed and reused, helping to conserve natural resources and reduce environmental impact. Common recyclable materials include paper, cardboard, glass, metals, and certain plastics, which can be collected, sorted, and transformed into new products.  </p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';
+            for (const file of event.target.files) {
+                const li = document.createElement('li');
+                li.textContent = file.name;
+                fileList.appendChild(li);
+            }
+        });
+
+        const uploadArea = document.getElementById('uploadArea');
+        uploadArea.addEventListener('dragover', function(event) {
+            event.preventDefault();
+            uploadArea.style.borderColor = '#007bff';
+        });
+
+        uploadArea.addEventListener('dragleave', function(event) {
+            uploadArea.style.borderColor = '#ccc';
+        });
+
+        uploadArea.addEventListener('drop', function(event) {
+            event.preventDefault();
+            uploadArea.style.borderColor = '#ccc';
+            const files = event.dataTransfer.files;
+            document.getElementById('fileInput').files = files;
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';
+            for (const file of files) {
+                const li = document.createElement('li');
+                li.textContent = file.name;
+                fileList.appendChild(li);
+            }
+        });
+    </script>
+</body>
+</html>
