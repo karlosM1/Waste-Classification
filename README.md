@@ -9,10 +9,10 @@ Save classified images and their predicted classes in a database.
 View a history of all classified images with their predicted classes and timestamps.
 
 # Requirements
-Python 3.x
-Flask
-Flask-SQLAlchemy
-Pillow
-NumPy
-TensorFlow
-OpenCV-Python
+- Python 3.x
+- Flask
+- Flask-SQLAlchemy
+- Pillow
+- NumPy
+- TensorFlow
+- OpenCV-Python
