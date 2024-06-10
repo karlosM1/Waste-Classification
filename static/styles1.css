@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    padding: 20px;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.card img {
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.25em;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

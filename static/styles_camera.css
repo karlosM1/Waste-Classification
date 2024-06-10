@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #dbdbdb;
+}
+
+.container-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-image {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.side-image.left {
+    width: 400px;
+    left: 150px;
+    top: 220px;
+}
+.side-image.right {
+    width: 400px;
+    right: 120px;
+    top: 230px;
+    transform: translateY(-50%) rotate(18deg);
+}
+
+.container {
+    border: 1px solid #ddd;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fffdfd;
+    border-radius: 10px;
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 20px;
+    z-index: 1;
+}
+.camera-box {
+    position: relative;
+    border: 2px dashed #000;
+    margin-bottom: 20px;
+}
+.camera-box video, .camera-box canvas {
+    width: 100%;
+    height: auto;
+}
+#snapButton {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5c5c;
+    border: none;
+    border-radius: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+#snapButton img {
+    width: 30px;
+}
+#detectButton {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.side-image{
+    position: relative;
+    width: 900px;
+}
+.side-image img-1{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    top: -7%;
+    left: 98%;
+}
